@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="newdb4eckDataSet6" targetNamespace="http://tempuri.org/newdb4eckDataSet6.xsd" xmlns:mstns="http://tempuri.org/newdb4eckDataSet6.xsd" xmlns="http://tempuri.org/newdb4eckDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="newdb4eckConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="newdb4eckConnectionString1 (Settings)" PropertyReference="ApplicationSettings.Project1.Properties.Settings.GlobalReference.Default.newdb4eckConnectionString1" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="АвтомобилиTableAdapter" GeneratorDataComponentClassName="АвтомобилиTableAdapter" Name="Автомобили" UserDataComponentName="АвтомобилиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="newdb4eckConnectionString1 (Settings)" DbObjectName="Автомобили" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Класс FROM Автомобили</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Класс" DataSetColumn="Класс" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="newdb4eckDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="newdb4eckDataSet6" msprop:Generator_UserDSName="newdb4eckDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Автомобили" msprop:Generator_TableClassName="АвтомобилиDataTable" msprop:Generator_TableVarName="tableАвтомобили" msprop:Generator_TablePropName="Автомобили" msprop:Generator_RowDeletingName="АвтомобилиRowDeleting" msprop:Generator_RowChangingName="АвтомобилиRowChanging" msprop:Generator_RowEvHandlerName="АвтомобилиRowChangeEventHandler" msprop:Generator_RowDeletedName="АвтомобилиRowDeleted" msprop:Generator_UserTableName="Автомобили" msprop:Generator_RowChangedName="АвтомобилиRowChanged" msprop:Generator_RowEvArgName="АвтомобилиRowChangeEvent" msprop:Generator_RowClassName="АвтомобилиRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Класс" msprop:Generator_ColumnVarNameInTable="columnКласс" msprop:Generator_ColumnPropNameInRow="Класс" msprop:Generator_ColumnPropNameInTable="КлассColumn" msprop:Generator_UserColumnName="Класс" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

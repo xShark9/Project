@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{241C41C2-BEDA-4B93-974C-DC567D425063}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project1</RootNamespace>
+    <AssemblyName>Project1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addclient.Designer.cs">
+      <DependentUpon>addclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addtarif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addtarif.Designer.cs">
+      <DependentUpon>addtarif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="automobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="automobil.Designer.cs">
+      <DependentUpon>automobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EgoldsFormStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EgoldsFormStyle.Designer.cs">
+      <DependentUpon>EgoldsFormStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controlls\button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clas.Designer.cs">
+      <DependentUpon>clas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controlls\Button2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controlls\EgoldsCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controlls\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kryg.cs" />
+    <Compile Include="newauto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newauto.Designer.cs">
+      <DependentUpon>newauto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newcl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newcl.Designer.cs">
+      <DependentUpon>newcl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newdb4eckDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newdb4eckDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="opz1cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opz1cs.Designer.cs">
+      <DependentUpon>opz1cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pavcl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pavcl.Designer.cs">
+      <DependentUpon>pavcl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pavmod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pavmod.Designer.cs">
+      <DependentUpon>pavmod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pavpm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pavpm.Designer.cs">
+      <DependentUpon>pavpm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="psped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psped.Designer.cs">
+      <DependentUpon>psped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pspfam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pspfam.Designer.cs">
+      <DependentUpon>pspfam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pspim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pspim.Designer.cs">
+      <DependentUpon>pspim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pspot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pspot.Designer.cs">
+      <DependentUpon>pspot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="psppacs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psppacs.Designer.cs">
+      <DependentUpon>psppacs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="psptp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psptp.Designer.cs">
+      <DependentUpon>psptp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tarif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarif.Designer.cs">
+      <DependentUpon>tarif.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addclient.resx">
+      <DependentUpon>addclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addtarif.resx">
+      <DependentUpon>addtarif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="automobil.resx">
+      <DependentUpon>automobil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clas.resx">
+      <DependentUpon>clas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newauto.resx">
+      <DependentUpon>newauto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newcl.resx">
+      <DependentUpon>newcl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opz1cs.resx">
+      <DependentUpon>opz1cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pavcl.resx">
+      <DependentUpon>pavcl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pavmod.resx">
+      <DependentUpon>pavmod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pavpm.resx">
+      <DependentUpon>pavpm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="psped.resx">
+      <DependentUpon>psped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pspfam.resx">
+      <DependentUpon>pspfam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pspim.resx">
+      <DependentUpon>pspim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pspot.resx">
+      <DependentUpon>pspot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="psppacs.resx">
+      <DependentUpon>psppacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="psptp.resx">
+      <DependentUpon>psptp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tarif.resx">
+      <DependentUpon>tarif.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="newdb4eckDataSet.xsc">
+      <DependentUpon>newdb4eckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet.xss">
+      <DependentUpon>newdb4eckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet1.xsc">
+      <DependentUpon>newdb4eckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet1.xss">
+      <DependentUpon>newdb4eckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet10.xsc">
+      <DependentUpon>newdb4eckDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet10.xss">
+      <DependentUpon>newdb4eckDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet11.xsc">
+      <DependentUpon>newdb4eckDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet11.xss">
+      <DependentUpon>newdb4eckDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet12.xsc">
+      <DependentUpon>newdb4eckDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet12.xss">
+      <DependentUpon>newdb4eckDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet13.xsc">
+      <DependentUpon>newdb4eckDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet13.xss">
+      <DependentUpon>newdb4eckDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet2.xsc">
+      <DependentUpon>newdb4eckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet2.xss">
+      <DependentUpon>newdb4eckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet3.xsc">
+      <DependentUpon>newdb4eckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet3.xss">
+      <DependentUpon>newdb4eckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet4.xsc">
+      <DependentUpon>newdb4eckDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet4.xss">
+      <DependentUpon>newdb4eckDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet5.xsc">
+      <DependentUpon>newdb4eckDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet5.xss">
+      <DependentUpon>newdb4eckDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet6.xsc">
+      <DependentUpon>newdb4eckDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet6.xss">
+      <DependentUpon>newdb4eckDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet7.xsc">
+      <DependentUpon>newdb4eckDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet7.xss">
+      <DependentUpon>newdb4eckDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet8.xsc">
+      <DependentUpon>newdb4eckDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet8.xss">
+      <DependentUpon>newdb4eckDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet9.xsc">
+      <DependentUpon>newdb4eckDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="newdb4eckDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newdb4eckDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newdb4eckDataSet9.xss">
+      <DependentUpon>newdb4eckDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="newdb4eck.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
