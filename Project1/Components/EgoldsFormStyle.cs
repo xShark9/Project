@@ -184,7 +184,7 @@ namespace Project1.Components
             Rectangle rectHeader = new Rectangle(0, 0, Form.Width - 1, HeaderHeight);
             Rectangle rectBorder = new Rectangle(0, 0, Form.Width - 1, Form.Height -1);
 
-            Rectangle rectTittleText = new Rectangle(rectHeader.X + 25, rectHeader.Y, rectHeader.Width, rectHeader.Height);
+            Rectangle rectTittleText = new Rectangle(rectHeader.X + 5, rectHeader.Y, rectHeader.Width, rectHeader.Height);
             Rectangle rectIcon = new Rectangle(
                 rectHeader.Height / 2 - IconSize.Width / 2,
                 rectHeader.Height / 2 - IconSize.Height / 2,
@@ -205,7 +205,7 @@ namespace Project1.Components
             graph.DrawString(Form.Text, Font, new SolidBrush(Color.White), rectTittleText, SF);
 
             // Иконка
-            graph.DrawImage(Form.Icon.ToBitmap(), rectIcon);
+            //graph.DrawImage(Form.Icon.ToBitmap(), rectIcon);
 
             // Кнопка X
             graph.DrawRectangle(new Pen(btnCloseHovered ? Color.Red : HeaderColor), rectBtnClose);

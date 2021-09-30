@@ -68,7 +68,7 @@ namespace Project1
             this.паспортDataGridViewTextBoxColumn,
             this.телефонDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.клиентыBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(731, 334);
@@ -143,7 +143,7 @@ namespace Project1
             // 
             this.delcl1.AutoSize = true;
             this.delcl1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delcl1.Location = new System.Drawing.Point(40, 348);
+            this.delcl1.Location = new System.Drawing.Point(39, 358);
             this.delcl1.Name = "delcl1";
             this.delcl1.Size = new System.Drawing.Size(145, 23);
             this.delcl1.TabIndex = 1;
@@ -151,7 +151,7 @@ namespace Project1
             // 
             // cltxt1
             // 
-            this.cltxt1.Location = new System.Drawing.Point(34, 374);
+            this.cltxt1.Location = new System.Drawing.Point(33, 384);
             this.cltxt1.Name = "cltxt1";
             this.cltxt1.Size = new System.Drawing.Size(162, 20);
             this.cltxt1.TabIndex = 2;
@@ -163,7 +163,7 @@ namespace Project1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 348);
+            this.label1.Location = new System.Drawing.Point(299, 358);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 6;
@@ -179,7 +179,7 @@ namespace Project1
             this.Exitbtn1.BackColor = System.Drawing.Color.DimGray;
             this.Exitbtn1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Exitbtn1.ForeColor = System.Drawing.Color.White;
-            this.Exitbtn1.Location = new System.Drawing.Point(626, 404);
+            this.Exitbtn1.Location = new System.Drawing.Point(625, 414);
             this.Exitbtn1.Name = "Exitbtn1";
             this.Exitbtn1.Rounding = 40;
             this.Exitbtn1.RoundingEnable = true;
@@ -194,7 +194,7 @@ namespace Project1
             this.button21.BackColor = System.Drawing.Color.DimGray;
             this.button21.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(304, 400);
+            this.button21.Location = new System.Drawing.Point(303, 410);
             this.button21.Name = "button21";
             this.button21.Rounding = 40;
             this.button21.RoundingEnable = true;
@@ -209,7 +209,7 @@ namespace Project1
             this.button22.BackColor = System.Drawing.Color.DimGray;
             this.button22.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(44, 400);
+            this.button22.Location = new System.Drawing.Point(43, 410);
             this.button22.Name = "button22";
             this.button22.Rounding = 40;
             this.button22.RoundingEnable = true;
@@ -224,7 +224,7 @@ namespace Project1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(732, 450);
+            this.ClientSize = new System.Drawing.Size(756, 460);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.Exitbtn1);

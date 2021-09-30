@@ -290,6 +290,9 @@
     <EmbeddedResource Include="client.resx">
       <DependentUpon>client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controlls\ShadowedForm.resx">
+      <DependentUpon>ShadowedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

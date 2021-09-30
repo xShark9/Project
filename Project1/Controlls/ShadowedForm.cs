@@ -75,5 +75,23 @@ namespace Project1.Controlls
             }
             base.WndProc(ref m);
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ShadowedForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "ShadowedForm";
+            this.Load += new System.EventHandler(this.ShadowedForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void ShadowedForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
