@@ -176,7 +176,7 @@ namespace Project1
             }
             catch
             {
-                MessageBox.Show("Не возможно удалить тариф, так как он используется.");
+                MessageBox.Show("Не возможно удалить тариф, так как он используется!!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
         }
 

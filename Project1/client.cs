@@ -90,7 +90,7 @@ namespace Project1
 
             catch
             {
-                MessageBox.Show("Не возможно удалить клиента, так как он участвует в заказе.");
+                MessageBox.Show("Не возможно удалить клиента, так как он участвует в заказе!!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
          
         }
