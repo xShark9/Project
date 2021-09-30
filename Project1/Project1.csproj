@@ -125,6 +125,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="kryg.cs" />
+    <Compile Include="new zakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new zakaz.Designer.cs">
+      <DependentUpon>new zakaz.cs</DependentUpon>
+    </Compile>
     <Compile Include="newauto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new zakaz.resx">
+      <DependentUpon>new zakaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newauto.resx">
       <DependentUpon>newauto.cs</DependentUpon>

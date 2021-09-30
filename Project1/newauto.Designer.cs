@@ -47,6 +47,7 @@ namespace Project1
             this.egoldsFormStyle1 = new Project1.Components.EgoldsFormStyle(this.components);
             this.Exitbtn1 = new Project1.button1();
             this.button21 = new Project1.Button2();
+            this.egoldsFormStyle2 = new Project1.Components.EgoldsFormStyle(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.newdb4eckDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автомобилиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newdb4eckDataSet2)).BeginInit();
@@ -204,6 +205,11 @@ namespace Project1
             this.button21.TextHover = null;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
+            // egoldsFormStyle2
+            // 
+            this.egoldsFormStyle2.Form = null;
+            this.egoldsFormStyle2.FormStyle = Project1.Components.EgoldsFormStyle.fStyle.None;
+            // 
             // newauto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,5 +259,6 @@ namespace Project1
         private Components.EgoldsFormStyle egoldsFormStyle1;
         private button1 Exitbtn1;
         private Button2 button21;
+        private Components.EgoldsFormStyle egoldsFormStyle2;
     }
 }

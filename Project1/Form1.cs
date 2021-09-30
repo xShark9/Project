@@ -202,5 +202,33 @@ namespace Project1
                 this.заказыTableAdapter.Fill(this.newdb4eckDataSet4.Заказы);
             }
         }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            new_zakaz p10 = new new_zakaz();
+            this.Hide();
+            p10.ShowDialog();
+            this.Show();
+            this.заказыTableAdapter.Fill(this.newdb4eckDataSet4.Заказы);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int del = Convert.ToInt32(comboBox1.Text);
+                string query = "DELETE FROM Заказы WHERE ID_Заказа = " + del;
+                OleDbCommand command = new OleDbCommand(query, Connect);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Заказ удален");
+                this.заказыTableAdapter.Fill(this.newdb4eckDataSet4.Заказы);
+                comboBox1.Text = null;
+            }
+            catch
+            {
+                MessageBox.Show("Не возможно удалить заказ");
+            }
+            this.заказыTableAdapter.Fill(this.newdb4eckDataSet4.Заказы);
+        }
     }
 }

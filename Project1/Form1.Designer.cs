@@ -66,9 +66,14 @@ namespace Project1
             this.f1tb1 = new System.Windows.Forms.ComboBox();
             this.f1lb1 = new System.Windows.Forms.Label();
             this.тарифTableAdapter = new Project1.newdb4eckDataSet13TableAdapters.ТарифTableAdapter();
-            this.Exitbtn1 = new Project1.button1();
-            this.button21 = new Project1.Button2();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button23 = new Project1.Button2();
+            this.button22 = new Project1.Button2();
             this.f1btn1 = new Project1.Button2();
+            this.button21 = new Project1.Button2();
+            this.Exitbtn1 = new Project1.button1();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыBindingSource)).BeginInit();
@@ -232,6 +237,7 @@ namespace Project1
             this.dataGridView1.DataSource = this.заказыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(743, 352);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -240,18 +246,21 @@ namespace Project1
             this.iDЗаказаDataGridViewTextBoxColumn.DataPropertyName = "ID_Заказа";
             this.iDЗаказаDataGridViewTextBoxColumn.HeaderText = "ID Заказа";
             this.iDЗаказаDataGridViewTextBoxColumn.Name = "iDЗаказаDataGridViewTextBoxColumn";
+            this.iDЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // паспортКлиентаDataGridViewTextBoxColumn
             // 
             this.паспортКлиентаDataGridViewTextBoxColumn.DataPropertyName = "Паспорт клиента";
             this.паспортКлиентаDataGridViewTextBoxColumn.HeaderText = "Паспорт клиента";
             this.паспортКлиентаDataGridViewTextBoxColumn.Name = "паспортКлиентаDataGridViewTextBoxColumn";
+            this.паспортКлиентаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // госНомерАвтомобиляDataGridViewTextBoxColumn
             // 
             this.госНомерАвтомобиляDataGridViewTextBoxColumn.DataPropertyName = "Гос номер автомобиля";
             this.госНомерАвтомобиляDataGridViewTextBoxColumn.HeaderText = "Гос номер автомобиля";
             this.госНомерАвтомобиляDataGridViewTextBoxColumn.Name = "госНомерАвтомобиляDataGridViewTextBoxColumn";
+            this.госНомерАвтомобиляDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаЗаказаDataGridViewTextBoxColumn
             // 
@@ -261,24 +270,30 @@ namespace Project1
             this.датаЗаказаDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.датаЗаказаDataGridViewTextBoxColumn.HeaderText = "Дата заказа";
             this.датаЗаказаDataGridViewTextBoxColumn.Name = "датаЗаказаDataGridViewTextBoxColumn";
+            this.датаЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // времяЗаказасуткиDataGridViewTextBoxColumn
             // 
             this.времяЗаказасуткиDataGridViewTextBoxColumn.DataPropertyName = "Время заказа (сутки)";
             this.времяЗаказасуткиDataGridViewTextBoxColumn.HeaderText = "Время заказа (сутки)";
             this.времяЗаказасуткиDataGridViewTextBoxColumn.Name = "времяЗаказасуткиDataGridViewTextBoxColumn";
+            this.времяЗаказасуткиDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // тарифDataGridViewTextBoxColumn
             // 
             this.тарифDataGridViewTextBoxColumn.DataPropertyName = "Тариф";
             this.тарифDataGridViewTextBoxColumn.HeaderText = "Тариф";
             this.тарифDataGridViewTextBoxColumn.Name = "тарифDataGridViewTextBoxColumn";
+            this.тарифDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // статусвыполненияDataGridViewCheckBoxColumn
             // 
             this.статусвыполненияDataGridViewCheckBoxColumn.DataPropertyName = "Статус_выполнения";
+            this.статусвыполненияDataGridViewCheckBoxColumn.FalseValue = "";
             this.статусвыполненияDataGridViewCheckBoxColumn.HeaderText = "Статус выполнения";
             this.статусвыполненияDataGridViewCheckBoxColumn.Name = "статусвыполненияDataGridViewCheckBoxColumn";
+            this.статусвыполненияDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.статусвыполненияDataGridViewCheckBoxColumn.TrueValue = "";
             // 
             // заказыBindingSource
             // 
@@ -296,7 +311,7 @@ namespace Project1
             // 
             // f1tb2
             // 
-            this.f1tb2.Location = new System.Drawing.Point(94, 410);
+            this.f1tb2.Location = new System.Drawing.Point(25, 460);
             this.f1tb2.Name = "f1tb2";
             this.f1tb2.Size = new System.Drawing.Size(143, 20);
             this.f1tb2.TabIndex = 4;
@@ -307,7 +322,7 @@ namespace Project1
             this.f1cb1.DataSource = this.тарифBindingSource;
             this.f1cb1.DisplayMember = "Тариф";
             this.f1cb1.FormattingEnabled = true;
-            this.f1cb1.Location = new System.Drawing.Point(243, 410);
+            this.f1cb1.Location = new System.Drawing.Point(25, 500);
             this.f1cb1.Name = "f1cb1";
             this.f1cb1.Size = new System.Drawing.Size(143, 21);
             this.f1cb1.TabIndex = 5;
@@ -329,9 +344,9 @@ namespace Project1
             this.f1tb1.DataSource = this.заказыBindingSource;
             this.f1tb1.DisplayMember = "ID_Заказа";
             this.f1tb1.FormattingEnabled = true;
-            this.f1tb1.Location = new System.Drawing.Point(3, 409);
+            this.f1tb1.Location = new System.Drawing.Point(25, 415);
             this.f1tb1.Name = "f1tb1";
-            this.f1tb1.Size = new System.Drawing.Size(85, 21);
+            this.f1tb1.Size = new System.Drawing.Size(143, 21);
             this.f1tb1.TabIndex = 8;
             this.f1tb1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.f1tb1_KeyPress);
             // 
@@ -349,50 +364,110 @@ namespace Project1
             // 
             this.тарифTableAdapter.ClearBeforeFill = true;
             // 
-            // Exitbtn1
+            // comboBox1
             // 
-            this.Exitbtn1.BackColor = System.Drawing.Color.DimGray;
-            this.Exitbtn1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.Exitbtn1.ForeColor = System.Drawing.Color.White;
-            this.Exitbtn1.Location = new System.Drawing.Point(632, 409);
-            this.Exitbtn1.Name = "Exitbtn1";
-            this.Exitbtn1.Rounding = 40;
-            this.Exitbtn1.RoundingEnable = true;
-            this.Exitbtn1.Size = new System.Drawing.Size(100, 56);
-            this.Exitbtn1.TabIndex = 11;
-            this.Exitbtn1.Text = "Закрыть";
-            this.Exitbtn1.TextHover = "Выйти";
-            this.Exitbtn1.Click += new System.EventHandler(this.Exitbtn1_Click);
+            this.comboBox1.DataSource = this.заказыBindingSource;
+            this.comboBox1.DisplayMember = "ID_Заказа";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(625, 386);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.TabIndex = 18;
             // 
-            // button21
+            // label1
             // 
-            this.button21.BackColor = System.Drawing.Color.DimGray;
-            this.button21.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(438, 409);
-            this.button21.Name = "button21";
-            this.button21.Rounding = 40;
-            this.button21.RoundingEnable = true;
-            this.button21.Size = new System.Drawing.Size(166, 56);
-            this.button21.TabIndex = 12;
-            this.button21.Text = "Отчет по заказам";
-            this.button21.TextHover = null;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(489, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Удалить заказ:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(242, 384);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(223, 23);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Форма добавления заказа:";
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.DimGray;
+            this.button23.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.button23.ForeColor = System.Drawing.Color.White;
+            this.button23.Location = new System.Drawing.Point(550, 433);
+            this.button23.Name = "button23";
+            this.button23.Rounding = 40;
+            this.button23.RoundingEnable = true;
+            this.button23.Size = new System.Drawing.Size(141, 25);
+            this.button23.TabIndex = 17;
+            this.button23.Text = "Удалить";
+            this.button23.TextHover = null;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.DimGray;
+            this.button22.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.Location = new System.Drawing.Point(292, 433);
+            this.button22.Name = "button22";
+            this.button22.Rounding = 40;
+            this.button22.RoundingEnable = true;
+            this.button22.Size = new System.Drawing.Size(119, 43);
+            this.button22.TabIndex = 15;
+            this.button22.Text = "Добавить заказа";
+            this.button22.TextHover = null;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // f1btn1
             // 
             this.f1btn1.BackColor = System.Drawing.Color.DimGray;
             this.f1btn1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.f1btn1.ForeColor = System.Drawing.Color.White;
-            this.f1btn1.Location = new System.Drawing.Point(68, 443);
+            this.f1btn1.Location = new System.Drawing.Point(25, 548);
             this.f1btn1.Name = "f1btn1";
             this.f1btn1.Rounding = 40;
             this.f1btn1.RoundingEnable = true;
-            this.f1btn1.Size = new System.Drawing.Size(189, 25);
+            this.f1btn1.Size = new System.Drawing.Size(143, 25);
             this.f1btn1.TabIndex = 13;
             this.f1btn1.Text = "Изменить";
             this.f1btn1.TextHover = null;
             this.f1btn1.Click += new System.EventHandler(this.f1btn1_Click_1);
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.DimGray;
+            this.button21.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.Location = new System.Drawing.Point(471, 530);
+            this.button21.Name = "button21";
+            this.button21.Rounding = 40;
+            this.button21.RoundingEnable = true;
+            this.button21.Size = new System.Drawing.Size(125, 43);
+            this.button21.TabIndex = 12;
+            this.button21.Text = "Отчет по заказам";
+            this.button21.TextHover = null;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // Exitbtn1
+            // 
+            this.Exitbtn1.BackColor = System.Drawing.Color.DimGray;
+            this.Exitbtn1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.Exitbtn1.ForeColor = System.Drawing.Color.White;
+            this.Exitbtn1.Location = new System.Drawing.Point(634, 530);
+            this.Exitbtn1.Name = "Exitbtn1";
+            this.Exitbtn1.Rounding = 40;
+            this.Exitbtn1.RoundingEnable = true;
+            this.Exitbtn1.Size = new System.Drawing.Size(92, 43);
+            this.Exitbtn1.TabIndex = 11;
+            this.Exitbtn1.Text = "Закрыть";
+            this.Exitbtn1.TextHover = "Выйти";
+            this.Exitbtn1.Click += new System.EventHandler(this.Exitbtn1_Click);
             // 
             // Form1
             // 
@@ -400,7 +475,12 @@ namespace Project1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(744, 478);
+            this.ClientSize = new System.Drawing.Size(744, 585);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button23);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.f1btn1);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.Exitbtn1);
@@ -459,6 +539,14 @@ namespace Project1
         private newdb4eckDataSet13 newdb4eckDataSet13;
         private System.Windows.Forms.BindingSource тарифBindingSource;
         private newdb4eckDataSet13TableAdapters.ТарифTableAdapter тарифTableAdapter;
+        private button1 Exitbtn1;
+        private Button2 button21;
+        private Button2 f1btn1;
+        private Button2 button22;
+        private Button2 button23;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDЗаказаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn паспортКлиентаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn госНомерАвтомобиляDataGridViewTextBoxColumn;
@@ -466,9 +554,6 @@ namespace Project1
         private System.Windows.Forms.DataGridViewTextBoxColumn времяЗаказасуткиDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn тарифDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn статусвыполненияDataGridViewCheckBoxColumn;
-        private button1 Exitbtn1;
-        private Button2 button21;
-        private Button2 f1btn1;
     }
 }
 
