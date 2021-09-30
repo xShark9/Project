@@ -71,7 +71,10 @@ namespace Project1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            if ((cltxt1.Text.Equals("")) || (cltxt1.Text.Equals("Введите id клиента")))
+
+            try
+            {
+   if ((cltxt1.Text.Equals("")) || (cltxt1.Text.Equals("Введите id клиента")))
                 MessageBox.Show("Введите id клиента!!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             else
             {
@@ -83,6 +86,13 @@ namespace Project1
                 this.клиентыTableAdapter.Fill(this.newdb4eckDataSet3.Клиенты);
                 cltxt1.Text = null;
             }
+            }
+
+            catch
+            {
+                MessageBox.Show("Не возможно удалить клиента, так как он участвует в заказе.");
+            }
+         
         }
     }
 }

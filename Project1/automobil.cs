@@ -92,18 +92,29 @@ namespace Project1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Equals("")) || (textBox1.Text.Equals("Введите id авто")))
-                MessageBox.Show("Введите id авто!!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-            else
+
+
+            try
             {
-                int del = Convert.ToInt32(textBox1.Text);
-                string query = "DELETE FROM Автомобили WHERE ID_Авто = " + del;
-                OleDbCommand command = new OleDbCommand(query, Connect);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Автомобиль удален");
-                this.автомобилиTableAdapter.Fill(this.newdb4eckDataSet.Автомобили);
-                textBox1.Text = null;
+                if ((textBox1.Text.Equals("")) || (textBox1.Text.Equals("Введите id авто")))
+                    MessageBox.Show("Введите id авто!!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                else
+                {
+                    int del = Convert.ToInt32(textBox1.Text);
+                    string query = "DELETE FROM Автомобили WHERE ID_Авто = " + del;
+                    OleDbCommand command = new OleDbCommand(query, Connect);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Автомобиль удален");
+                    this.автомобилиTableAdapter.Fill(this.newdb4eckDataSet.Автомобили);
+                    textBox1.Text = null;
+                }
             }
+
+            catch
+            {
+                MessageBox.Show("Не возможно удалить автомобиль, так как он участвует в заказе.");
+            }
+           
         }
     }
 }

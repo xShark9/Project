@@ -110,14 +110,23 @@ namespace Project1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            int del = Convert.ToInt32(addtrcb1.Text);
-            //string del = addtrcb1.Text;
-            string query = "DELETE FROM Класс WHERE ID_Класс = " + del;
-            OleDbCommand command = new OleDbCommand(query, Connect);
-            command.ExecuteNonQuery();
-            this.классTableAdapter.Fill(this.newdb4eckDataSet5.Класс);
-            MessageBox.Show("Тариф удален");
-            this.классTableAdapter.Fill(this.newdb4eckDataSet5.Класс);
+
+            try
+            {
+                int del = Convert.ToInt32(addtrcb1.Text);
+                //string del = addtrcb1.Text;
+                string query = "DELETE FROM Класс WHERE ID_Класс = " + del;
+                OleDbCommand command = new OleDbCommand(query, Connect);
+                command.ExecuteNonQuery();
+                this.классTableAdapter.Fill(this.newdb4eckDataSet5.Класс);
+                MessageBox.Show("Тариф удален");
+                this.классTableAdapter.Fill(this.newdb4eckDataSet5.Класс);
+            }
+            catch
+            {
+                MessageBox.Show("Не возможно удалить класс, так как он используется.");
+            }
+
         }
 
         private void button21_Click(object sender, EventArgs e)

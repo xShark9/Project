@@ -47,7 +47,7 @@ namespace Project1
                 ExcelApp.Cells[1, 7].ColumnWidth = 10;
                 ExcelApp.Cells[1, 8].ColumnWidth = 18;
                 ExcelApp.Columns[6].Numberformat = "0 #,00 ₽";
-                ExcelApp.Columns[7].Numberformat = "0,0";
+                ExcelApp.Columns[7].Numberformat = "0,0#";
                 ExcelApp.Columns[8].Numberformat = "0 #,00 ₽";
                 ExcelApp.Rows[1].Font.Bold = true;
                 ExcelApp.Rows[1].HorizontalAlignment = HorizontalAlignment.Center;

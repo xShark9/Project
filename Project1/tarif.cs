@@ -162,14 +162,22 @@ namespace Project1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            int del = Convert.ToInt32(addtrcb1.Text);
-            //string del = addtrcb1.Text;
-            string query = "DELETE FROM Тариф WHERE ID_Тариф = " + del;
-            OleDbCommand command = new OleDbCommand(query, Connect);
-            command.ExecuteNonQuery();
-            this.тарифTableAdapter2.Fill(this.newdb4eckDataSet7.Тариф);
-            MessageBox.Show("Тариф удален");
-            this.тарифTableAdapter2.Fill(this.newdb4eckDataSet7.Тариф);
+
+            try
+            {
+                int del = Convert.ToInt32(addtrcb1.Text);
+                //string del = addtrcb1.Text;
+                string query = "DELETE FROM Тариф WHERE ID_Тариф = " + del;
+                OleDbCommand command = new OleDbCommand(query, Connect);
+                command.ExecuteNonQuery();
+                this.тарифTableAdapter2.Fill(this.newdb4eckDataSet7.Тариф);
+                MessageBox.Show("Тариф удален");
+                this.тарифTableAdapter2.Fill(this.newdb4eckDataSet7.Тариф);
+            }
+            catch
+            {
+                MessageBox.Show("Не возможно удалить тариф, так как он используется.");
+            }
         }
 
         private void button23_Click(object sender, EventArgs e)
